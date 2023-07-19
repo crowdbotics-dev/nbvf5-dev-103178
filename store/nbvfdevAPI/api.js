@@ -30,6 +30,24 @@ function api_v1_sderr_destroy(payload) {
 function api_v1_signup_create(payload) {
   return nbvfdevAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_vcncn_list(payload) {
+  return nbvfdevAPI.get(`/api/v1/vcncn/`)
+}
+function api_v1_vcncn_create(payload) {
+  return nbvfdevAPI.post(`/api/v1/vcncn/`, payload)
+}
+function api_v1_vcncn_retrieve(payload) {
+  return nbvfdevAPI.get(`/api/v1/vcncn/${payload.id}/`)
+}
+function api_v1_vcncn_update(payload) {
+  return nbvfdevAPI.put(`/api/v1/vcncn/${payload.id}/`, payload)
+}
+function api_v1_vcncn_partial_update(payload) {
+  return nbvfdevAPI.patch(`/api/v1/vcncn/${payload.id}/`, payload)
+}
+function api_v1_vcncn_destroy(payload) {
+  return nbvfdevAPI.delete(`/api/v1/vcncn/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return nbvfdevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -73,6 +91,12 @@ export const apiService = {
   api_v1_sderr_partial_update,
   api_v1_sderr_destroy,
   api_v1_signup_create,
+  api_v1_vcncn_list,
+  api_v1_vcncn_create,
+  api_v1_vcncn_retrieve,
+  api_v1_vcncn_update,
+  api_v1_vcncn_partial_update,
+  api_v1_vcncn_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
