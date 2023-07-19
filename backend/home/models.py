@@ -9,3 +9,7 @@ class Sderr(models.Model):
         response = requests.get('https://hello.com')
         data = response.json()
         return data
+class Vcncn(models.Model):
+    'Generated Model'
+    cndnd = models.BigIntegerField()
+    dhdhd = models.BigIntegerField()

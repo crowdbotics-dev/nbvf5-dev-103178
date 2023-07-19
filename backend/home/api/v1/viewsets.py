@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Sderr
-from .serializers import SderrSerializer
+from home.models import Sderr,Vcncn
+from .serializers import SderrSerializer,VcncnSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class SderrViewSet(viewsets.ModelViewSet):
     serializer_class = SderrSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Sderr.objects.all()
+
+class VcncnViewSet(viewsets.ModelViewSet):
+    serializer_class = VcncnSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Vcncn.objects.all()
