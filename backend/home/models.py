@@ -6,7 +6,6 @@ class Sderr(models.Model):
     oerrur = models.BigIntegerField()
     def test_method(self):
         import requests
-        response = requests.get("https://hello.com")
+        response = requests.get('https://hello.com')
         data = response.json()
-        print(data)
         return data
